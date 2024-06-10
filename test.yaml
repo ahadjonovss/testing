@@ -1,0 +1,34 @@
+appId: com.example.testing
+---
+
+- launchApp:
+    clearState: true
+    # Timeout in milliseconds
+- tapOn: "Get Started"
+- tapOn:
+    id: "name_text_field"
+- inputText: "Test User"
+- hideKeyboard
+- tapOn: "Register"
+#- extendedWaitUntil:
+#    notVisible:
+#      id: "name_text_field" # or any other selector
+#    timeout: 10000
+- tapOn:
+    id: 'home_input'
+- inputText: "11"
+- hideKeyboard
+- tapOn: "Start Counting"
+- repeat:
+    times: 3
+    commands:
+      - tapOn:
+          id: "Increment"
+- repeat:
+    times: 12
+    commands:
+      - tapOn:
+          id: "Decrement"
+
+
+
